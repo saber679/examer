@@ -5,21 +5,23 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc -b && vite build",
-    "test": "tsx --test src/core.test.ts"
+    "build": "tsc -b && vite build && node scripts/build-offline.mjs",
+    "test": "tsx --test src/core.test.ts",
+    "build:offline": "node scripts/build-offline.mjs"
   },
   "dependencies": {
+    "fflate": "^0.8.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "fflate": "^0.8.2"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@types/node": "^22.15.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
-    "@types/node": "^22.15.0",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5",
     "@vitejs/plugin-react": "^4.4.1",
-    "tsx": "^4.19.4"
+    "esbuild": "^0.28.2",
+    "tsx": "^4.19.4",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
   }
 }

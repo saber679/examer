@@ -7,7 +7,10 @@
     <title>交前看一眼 · 提交材料前，检查一下。</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><p>正在加载交前看一眼。如果没有自动打开，请打开同一目录下的「打开即用.html」。</p></div>
+    <script>
+      if (location.protocol === 'file:') location.replace('./打开即用.html');
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
